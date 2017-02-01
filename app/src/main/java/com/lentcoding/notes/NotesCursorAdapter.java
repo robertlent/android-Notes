@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 @SuppressWarnings("SameParameterValue")
-public class NotesCursorAdapter extends CursorAdapter {
-    public NotesCursorAdapter(Context context, Cursor c, int flags) {
+class NotesCursorAdapter extends CursorAdapter {
+    NotesCursorAdapter(Context context, Cursor c, int flags) {
         super(context, c, flags);
     }
 
@@ -21,13 +21,21 @@ public class NotesCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        String noteText = cursor.getString(cursor.getColumnIndex(DBOpenHelper.NOTE_TEXT));
-        int pos = noteText.indexOf(10);
+        String listItem, noteSubject, noteText;
+        noteSubject = cursor.getString(cursor.getColumnIndex(DBOpenHelper.NOTE_SUBJECT));
+        noteText = cursor.getString(cursor.getColumnIndex(DBOpenHelper.NOTE_TEXT));
+
+        if (noteSubject.length() == 0) {
+            listItem = noteText;
+        } else {
+            listItem = noteSubject;
+        }
+        int pos = listItem.indexOf(10);
         if (pos != -1) {
-            noteText = noteText.substring(0, pos) + "...";
+            listItem = listItem.substring(0, pos) + "...";
         }
 
         TextView tv = (TextView) view.findViewById(R.id.tvNote);
-        tv.setText(noteText);
+        tv.setText(listItem);
     }
 }

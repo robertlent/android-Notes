@@ -6,10 +6,12 @@
     <string name="are_you_sure">Are you sure you want to delete this note?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="title_activity_editor">EditorActivity</string>
+    <string name="title_activity_editor">Editing Note</string>
     <string name="new_note">New Note</string>
     <string name="note_updated">Your note has been updated</string>
     <string name="action_delete">Delete</string>
     <string name="note_deleted">Your note has been deleted</string>
     <string name="enter_note_here">Enter note here</string>
+    <string name="document_icon_desc">Document Icon</string>
+    <string name="enter_subject_here">Enter note subject here</string>
 </resources>

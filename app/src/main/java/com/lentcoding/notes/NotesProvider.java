@@ -49,7 +49,7 @@ public class NotesProvider extends ContentProvider {
         return null;
     }
 
-    
+
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         long id = database.insert(DBOpenHelper.TABLE_NOTES, null, values);
