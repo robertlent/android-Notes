@@ -35,7 +35,7 @@ class NotesCursorAdapter extends CursorAdapter {
             listItem = listItem.substring(0, pos) + "...";
         }
 
-        TextView tv = (TextView) view.findViewById(R.id.tvNote);
+        TextView tv = view.findViewById(R.id.tvNote);
         tv.setText(listItem);
     }
 }

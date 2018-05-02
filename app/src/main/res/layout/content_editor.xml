@@ -25,7 +25,7 @@
         android:gravity="top"
         android:hint="@string/enter_subject_here"
         android:inputType="textCapSentences"
-        android:textSize="20sp" />
+        android:textSize="@dimen/textSize" />
 
     <EditText
         android:id="@+id/editText"
@@ -35,6 +35,6 @@
         android:gravity="start"
         android:hint="@string/enter_note_here"
         android:inputType="textMultiLine|textCapSentences"
-        android:textSize="20sp" />
+        android:textSize="@dimen/textSize" />
 
 </RelativeLayout>

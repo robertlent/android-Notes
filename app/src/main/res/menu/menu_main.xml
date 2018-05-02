@@ -8,5 +8,4 @@
         android:orderInCategory="101"
         android:title="@string/delete_all_notes"
         app:showAsAction="never" />
-
 </menu>

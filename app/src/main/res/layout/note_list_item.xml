@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:padding="4dp">
+    android:padding="4sp">
 
     <ImageView
         android:id="@+id/imageDocIcon"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:src="@drawable/ic_document"
-        android:contentDescription="@string/document_icon_desc"/>
+        android:layout_width="@dimen/docIconSize"
+        android:layout_height="@dimen/docIconSize"
+        android:contentDescription="@string/document_icon_desc"
+        android:src="@drawable/ic_document" />
 
     <TextView
         android:id="@+id/tvNote"
@@ -18,12 +18,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="4dp"
+        android:layout_margin="4sp"
         android:layout_toEndOf="@+id/imageDocIcon"
         android:layout_toRightOf="@+id/imageDocIcon"
         android:maxLines="1"
         android:text=""
         android:textColor="@color/list_item_text"
-        android:textSize="20sp" />
+        android:textSize="@dimen/textSize" />
 
 </RelativeLayout>
